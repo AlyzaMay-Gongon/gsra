@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Data User</ion-title>
+    <ionic-button slot="start">
+      <ionic-back-button></ionic-back-button>
+    </ionic-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-pict">
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Sign Up </ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+        <ion-item>
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input type="text" [(ngModel)]="CustomerName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-input type="text" [(ngModel)]="CustomerAddress"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Date of Birth</ion-label>
+          <ion-datetime displayFormat="DD MM YYYY" placeholder="Select Date" [(ngModel)]="dob"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Age</ion-label>
+          <ion-input type="text" [(ngModel)]="Age"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select placeholder="Select One" [(ngModule)]="Gender">
+            <ion-select-option value="m">Male</ion-select-option>
+            <ion-select-option value="f">Female</ion-select-option>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contact No.</ion-label>
+          <ion-input type="text" [(ngModel)]="ContactNo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email Address</ion-label>
+          <ion-input type="email" [(ngModel)]="Email_Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="con_pass"></ion-input>
+        </ion-item>
+        <ion-button *ngIf="id==0" color="primary" size="full" (click)="crudActionn(Create)" [disabled]="disabledbutton">Submit</ion-button>
+        <ion-button *ngIf="id=!0" color="primary" size="full" (click)="crudActionn(Update)" [disabled]="disabledbutton">Update</ion-button>
+      </ion-card-content>
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+  </div>
+</ion-content>
